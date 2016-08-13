@@ -38,16 +38,33 @@ var inspiringQuote = [["The best preparation for tomorrow is doing your best tod
     ["All progress takes place outside the comfort zone.", "Michael John Bobak"],
     ["The only place where success comes before work is in the dictionary.", "Vidal Sassoon"],
     ["To live a creative life, we must lose our fear of being wrong.", "Anonymous"]] ;
+    var colors = ['#c0392b' , '#d35400' , '#f39c12' , '#7f8c8d' , '#2c3e50' , '#9b59b6' , '#3498db' , '#27ae60']
+    var quoteSelector = Math.floor(Math.random() * 10)+1  ;
 $(document).ready(
+	$("#quote").html(inspiringQuote[quoteSelector][0]) ,
+	$("#quoteTeller").html("– " +inspiringQuote[quoteSelector][1]),
+	$("#All").click(function(){
+		$("#quote").html() ,
+		$("#quoteTeller").html()
+	}),
+	$("#inspiring").click(function(){
+		$("#quote").html(inspiringQuote[quoteSelector][0]),
+		$("#quoteTeller").html("– " +inspiringQuote[quoteSelector][1])
+	}),
+	$("#Success").click(function(){
+		$("#quote").html(successQuote[quoteSelector][0]),
+		$("#quoteTeller").html("– " +successQuote[quoteSelector][1])
+	}),
+	$("#Positive").click(function(){
+		$("#quote").html(positiveQuote[quoteSelector][0]),
+		$("#quoteTeller").html("– " +positiveQuote[quoteSelector][1])
+	}),
+	$("#Motivational").click(function(){
+		$("#quote").html(motivationalQuote[quoteSelector][0]),
+		$("#quoteTeller").html("– " +motivationalQuote[quoteSelector][1])
+	}) , 
+	setInterval(function(){quoteSelector += 1 ; if(quoteSelector > 10){quoteSelector = 0}} , 1000) 
 	
 
 
-
-
-
-
-
-
-
-
-	)
+)

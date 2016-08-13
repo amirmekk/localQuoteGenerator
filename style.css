@@ -1,0 +1,19 @@
+body {
+	background-color : #1abc9c;
+}
+#text {
+	color : white;
+	font-size: 300% ;
+	font-family: 'Fjalla One', sans-serif;
+	border : 8px white solid;
+	padding-left: 3%;
+	max-width:  800px;
+	margin-left :20%;
+	margin-right :20%;
+	margin-top: 1%
+}
+#quoteTeller {
+	font-family: 'Dosis', sans-serif;
+	font-style: italic;
+	 text-indent: 100px;
+}
