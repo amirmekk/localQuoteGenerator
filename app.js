@@ -42,9 +42,9 @@ var inspiringQuote = [["The best preparation for tomorrow is doing your best tod
     allQuote = inspiringQuote.concat(successQuote , positiveQuote , motivationalQuote) ;
     var quoteSelector = Math.floor(Math.random() * 10)+1  ;
 $(document).ready(
-	$("#quote").html(inspiringQuote[quoteSelector][0]) ,
-	$("#quoteTeller").html("– " +inspiringQuote[Math.floor(Math.random() * 8)][1]),
-	$("#All").click(function(){
+	$("#quote").html(allQuote[quoteSelector][0]) ,
+	$("#quoteTeller").html("– " +allQuote[quoteSelector][1]),
+	$(".All").click(function(){
 		$("#quote").html(allQuote[Math.floor(Math.random() * 40)+1][0]),
 		$("#quoteTeller").html("– " +allQuote[Math.floor(Math.random() * 40)+1][1],
 		$("body").animate({backgroundColor : colors[Math.floor(Math.random() * 8)] } , 800)) 
