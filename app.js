@@ -40,7 +40,7 @@ var inspiringQuote = [["The best preparation for tomorrow is doing your best tod
     ["To live a creative life, we must lose our fear of being wrong.", "Anonymous"]] ,
     colors = ['#c0392b' , '#d35400' , '#f39c12' , '#7f8c8d' , '#2c3e50' , '#9b59b6' , '#3498db' , '#27ae60'] ,
     allQuote = inspiringQuote.concat(successQuote , positiveQuote , motivationalQuote) ;
-    var quoteSelector = Math.floor(Math.random() * 10)+1  ;
+    var quoteSelector = Math.floor(Math.random() * 11)  ;
 $(document).ready(
 	$("#quote").html(allQuote[quoteSelector][0]) ,
 	$("#quoteTeller").html("– " +allQuote[quoteSelector][1]),
@@ -69,7 +69,9 @@ $(document).ready(
 		$("#quoteTeller").html("– " +motivationalQuote[quoteSelector][1],
 		$("body").animate({backgroundColor : colors[Math.floor(Math.random() * 8)] } , 800))
 	}) , 
-	setInterval(function(){quoteSelector += 1 ; if(quoteSelector > 10){quoteSelector = 0}} , 1000) 
-	
+	setInterval(function(){quoteSelector += 1 ; if(quoteSelector > 10){quoteSelector = 0}} , 1000) ,
+	$(".All , #inspiring , #Success , #Positive , #Motivational").click(function(){
+		$("#quote , #quoteTeller").addClass("animated lightSpeedIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {$("#quote , #quoteTeller").removeClass('animated lightSpeedIn')})
+	})
 
 )
